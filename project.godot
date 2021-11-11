@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Equip",
+"class": "Armor",
+"language": "GDScript",
+"path": "res://classes/Armor.gd"
+}, {
+"base": "Item",
+"class": "Equip",
+"language": "GDScript",
+"path": "res://classes/Equip.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://classes/Item.gd"
+}, {
+"base": "Item",
+"class": "Materials",
+"language": "GDScript",
+"path": "res://classes/Materials.gd"
+} ]
+_global_script_class_icons={
+"Armor": "",
+"Equip": "",
+"Item": "",
+"Materials": ""
+}
+
 [application]
 
 config/name="XiuXianZhangMenRen"

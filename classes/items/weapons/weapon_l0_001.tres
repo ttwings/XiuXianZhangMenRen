@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://classes/Weapon.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "桃木剑"
+describe = "用桃木雕刻的剑"
+lv = 0
+price = 10
+quality = 10
+durability = 10
+equipment_location = ""
+physical_damage = 1
+spell_damage = 0
+physical_damage_type = 3
+spell_damage_type = 0

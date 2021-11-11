@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://classes/Armor.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "清风道服"
+describe = "入门弟子所穿道服"
+lv = 0
+price = 50
+quality = 50
+durability = 50
+equipment_location = "Armor"
+defense_physical = 1
+defense_spell = 0
