@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "清风道服"
+alias = "道服"
 describe = "入门弟子所穿道服"
 lv = 0
 price = 50

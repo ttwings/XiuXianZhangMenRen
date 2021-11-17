@@ -3,7 +3,7 @@ extends Resource
 
 class_name Item
 
-export(String) var name
+export(String) var alias
 export(String) var describe
 export(int,0,9) var lv
 export(int,0,999999) var price
