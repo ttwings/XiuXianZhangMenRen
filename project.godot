@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Item",
 "language": "GDScript",
-"path": "res://classes/Item.gd"
+"path": "res://data/Item.gd"
 }, {
 "base": "Item",
 "class": "Materials",
