@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "桃木剑"
+alias = "桃木剑"
 describe = "用桃木雕刻的剑"
 lv = 0
 price = 10

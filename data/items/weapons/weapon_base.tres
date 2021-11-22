@@ -4,14 +4,14 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "桃木剑"
-describe = "用桃木雕刻的剑"
+alias = ""
+describe = ""
 lv = 0
-price = 10
-quality = 50
-durability = 50
-equipment_location = "Weapon"
-physical_damage = 10
+price = 0
+quality = 0
+durability = 0
+equipment_location = ""
+physical_damage = 0
 spell_damage = 0
-physical_damage_type = 3
+physical_damage_type = 0
 spell_damage_type = 0
