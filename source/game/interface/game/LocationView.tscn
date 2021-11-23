@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://art/tres/theme.tres" type="Theme" id=1]
+[ext_resource path="res://source/game/interface/game/LocationView.gd" type="Script" id=2]
 
 [node name="LocationView" type="Panel"]
 modulate = Color( 1, 1, 1, 0.694118 )
@@ -9,6 +10,7 @@ margin_top = 239.773
 margin_right = 644.692
 margin_bottom = 513.773
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
