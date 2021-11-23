@@ -1,0 +1,259 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art/tres/theme.tres" type="Theme" id=1]
+
+[node name="LocationView" type="Panel"]
+modulate = Color( 1, 1, 1, 0.694118 )
+margin_left = 474.692
+margin_top = 239.773
+margin_right = 644.692
+margin_bottom = 513.773
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 165.0
+margin_bottom = 269.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 160.0
+margin_bottom = 18.0
+
+[node name="Alias" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 56.0
+margin_right = 104.0
+margin_bottom = 18.0
+text = "剑影山"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_top = 22.0
+margin_right = 160.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Concentration" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 26.0
+margin_right = 160.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Concentration"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵气品阶"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Concentration"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Concentration"]
+margin_left = 88.0
+margin_right = 152.0
+margin_bottom = 18.0
+text = "二阶上品"
+
+[node name="Category" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 160.0
+margin_bottom = 66.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Category"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵气类别"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Category"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Category"]
+margin_left = 88.0
+margin_right = 104.0
+margin_bottom = 18.0
+text = "火"
+
+[node name="Gather" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 70.0
+margin_right = 160.0
+margin_bottom = 88.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Gather"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "聚灵效果"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Gather"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Gather"]
+margin_left = 88.0
+margin_right = 112.0
+margin_bottom = 18.0
+text = "2.8"
+
+[node name="ResStone" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 160.0
+margin_bottom = 110.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ResStone"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵石储量"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/ResStone"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/ResStone"]
+margin_left = 88.0
+margin_right = 128.0
+margin_bottom = 18.0
+text = "12546"
+
+[node name="ResPlant" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 160.0
+margin_bottom = 132.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ResPlant"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵植储量"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/ResPlant"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/ResPlant"]
+margin_left = 88.0
+margin_right = 128.0
+margin_bottom = 18.0
+text = "12546"
+
+[node name="Sect" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 136.0
+margin_right = 160.0
+margin_bottom = 154.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Sect"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "门派所属"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Sect"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Sect"]
+margin_left = 88.0
+margin_right = 136.0
+margin_bottom = 18.0
+text = "楚秦门"
+
+[node name="Space" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 158.0
+margin_right = 160.0
+margin_bottom = 176.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Space"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵地数量"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Space"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Space"]
+margin_left = 88.0
+margin_right = 112.0
+margin_bottom = 18.0
+text = "0/5"
+
+[node name="Field" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 180.0
+margin_right = 160.0
+margin_bottom = 198.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Field"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵田数量"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Field"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Field"]
+margin_left = 88.0
+margin_right = 96.0
+margin_bottom = 18.0
+text = "3"
+
+[node name="Mine" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 202.0
+margin_right = 160.0
+margin_bottom = 220.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Mine"]
+margin_right = 64.0
+margin_bottom = 18.0
+text = "灵矿数量"
+
+[node name="Separator" type="Label" parent="MarginContainer/VBoxContainer/Mine"]
+margin_left = 68.0
+margin_right = 84.0
+margin_bottom = 18.0
+text = "："
+
+[node name="Value" type="Label" parent="MarginContainer/VBoxContainer/Mine"]
+margin_left = 88.0
+margin_right = 96.0
+margin_bottom = 18.0
+text = "3"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 224.0
+margin_right = 160.0
+margin_bottom = 264.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true

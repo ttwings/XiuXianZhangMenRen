@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://source/map/Location.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+alias = "剑影山"
+category = "金"
+gather = 0
+res_stone = 0
+res_plant = 0
+sect = ""
+space = 0
+field = 0
+mine = 0

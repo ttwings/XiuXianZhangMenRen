@@ -12,34 +12,48 @@ _global_script_classes=[ {
 "base": "Equip",
 "class": "Armor",
 "language": "GDScript",
-"path": "res://classes/Armor.gd"
+"path": "res://source/item/Armor.gd"
 }, {
 "base": "Item",
 "class": "Equip",
 "language": "GDScript",
-"path": "res://classes/Equip.gd"
+"path": "res://source/item/Equip.gd"
 }, {
 "base": "Resource",
 "class": "Item",
 "language": "GDScript",
-"path": "res://data/Item.gd"
+"path": "res://source/item/Item.gd"
+}, {
+"base": "Resource",
+"class": "Location",
+"language": "GDScript",
+"path": "res://source/map/Location.gd"
 }, {
 "base": "Item",
 "class": "Materials",
 "language": "GDScript",
-"path": "res://classes/Materials.gd"
+"path": "res://source/item/Materials.gd"
 } ]
 _global_script_class_icons={
 "Armor": "",
 "Equip": "",
 "Item": "",
+"Location": "",
 "Materials": ""
 }
 
 [application]
 
 config/name="XiuXianZhangMenRen"
+config/description="修仙掌门人"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+window/stretch/mode="2d"
 
 [physics]
 
