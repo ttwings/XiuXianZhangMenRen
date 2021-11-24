@@ -1,7 +1,7 @@
 extends Control
 
 onready var location_view = $LocationView
-onready var world_map = $ViewportContainer/Viewport/WorldMap
+onready var world_map = $Port/Viewport/WorldMap
 var location_node
 
 func _ready():

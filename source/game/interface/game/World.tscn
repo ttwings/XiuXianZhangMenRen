@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://source/game/interface/game/World.gd" type="Script" id=1]
 [ext_resource path="res://source/game/interface/game/LocationView.tscn" type="PackedScene" id=2]
 [ext_resource path="res://stages/WorldMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://art/tres/theme.tres" type="Theme" id=5]
+[ext_resource path="res://source/game/interface/game/Port.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -22,25 +23,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
+[node name="Port" type="ViewportContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+[node name="Viewport" type="Viewport" parent="Port"]
 size = Vector2( 1280, 720 )
 handle_input_locally = false
 usage = 0
 render_target_update_mode = 3
 physics_object_picking = true
 
-[node name="WorldMap" parent="ViewportContainer/Viewport" instance=ExtResource( 3 )]
+[node name="WorldMap" parent="Port/Viewport" instance=ExtResource( 3 )]
 
-[node name="Panel" type="Panel" parent="ViewportContainer"]
+[node name="Panel" type="Panel" parent="Port"]
 self_modulate = Color( 1, 1, 1, 0.517647 )
 margin_right = 1280.0
 margin_bottom = 32.0
@@ -48,14 +50,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="ViewportContainer/Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="Port/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ViewportContainer/Panel/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Port/Panel/CenterContainer"]
 margin_left = 377.0
 margin_top = 7.0
 margin_right = 902.0
@@ -64,7 +66,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Alias" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="Alias" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer"]
 margin_right = 80.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -73,7 +75,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label5" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="Label5" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer"]
 visible = false
 margin_left = 84.0
 margin_right = 164.0
@@ -84,12 +86,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="concentration" type="HBoxContainer" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="concentration" type="HBoxContainer" parent="Port/Panel/CenterContainer/HBoxContainer"]
 margin_left = 84.0
 margin_right = 213.0
 margin_bottom = 17.0
 
-[node name="Label" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/concentration"]
+[node name="Label" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/concentration"]
 margin_right = 96.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -98,7 +100,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Separate" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/concentration"]
+[node name="Separate" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/concentration"]
 margin_left = 100.0
 margin_right = 116.0
 margin_bottom = 17.0
@@ -108,7 +110,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Value" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/concentration"]
+[node name="Value" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/concentration"]
 margin_left = 120.0
 margin_right = 129.0
 margin_bottom = 17.0
@@ -118,12 +120,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Camp" type="HBoxContainer" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="Camp" type="HBoxContainer" parent="Port/Panel/CenterContainer/HBoxContainer"]
 margin_left = 217.0
 margin_right = 321.0
 margin_bottom = 17.0
 
-[node name="Label" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Camp"]
+[node name="Label" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Camp"]
 margin_right = 32.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -132,7 +134,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Separate" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Camp"]
+[node name="Separate" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Camp"]
 margin_left = 36.0
 margin_right = 52.0
 margin_bottom = 17.0
@@ -142,7 +144,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Value" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Camp"]
+[node name="Value" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Camp"]
 margin_left = 56.0
 margin_right = 104.0
 margin_bottom = 17.0
@@ -152,12 +154,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sect" type="HBoxContainer" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="Sect" type="HBoxContainer" parent="Port/Panel/CenterContainer/HBoxContainer"]
 margin_left = 325.0
 margin_right = 429.0
 margin_bottom = 17.0
 
-[node name="Label" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Sect"]
+[node name="Label" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Sect"]
 margin_right = 32.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -166,7 +168,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Separate" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Sect"]
+[node name="Separate" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Sect"]
 margin_left = 36.0
 margin_right = 52.0
 margin_bottom = 17.0
@@ -176,7 +178,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Value" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Sect"]
+[node name="Value" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Sect"]
 margin_left = 56.0
 margin_right = 104.0
 margin_bottom = 17.0
@@ -186,12 +188,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Year" type="HBoxContainer" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer"]
+[node name="Year" type="HBoxContainer" parent="Port/Panel/CenterContainer/HBoxContainer"]
 margin_left = 433.0
 margin_right = 525.0
 margin_bottom = 17.0
 
-[node name="Label" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Year"]
+[node name="Label" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Year"]
 margin_right = 32.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
@@ -200,7 +202,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Separate" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Year"]
+[node name="Separate" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Year"]
 margin_left = 36.0
 margin_right = 52.0
 margin_bottom = 17.0
@@ -210,7 +212,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Value" type="Label" parent="ViewportContainer/Panel/CenterContainer/HBoxContainer/Year"]
+[node name="Value" type="Label" parent="Port/Panel/CenterContainer/HBoxContainer/Year"]
 margin_left = 56.0
 margin_right = 92.0
 margin_bottom = 17.0
@@ -226,4 +228,5 @@ margin_top = 96.0
 margin_right = 744.0
 margin_bottom = 370.0
 
-[connection signal="find_location" from="ViewportContainer/Viewport/WorldMap" to="." method="_on_WorldMap_find_location"]
+[connection signal="gui_input" from="Port" to="Port/Viewport/WorldMap" method="_on_Port_gui_input"]
+[connection signal="mouse_exited" from="Port" to="Port/Viewport/WorldMap" method="_on_Port_mouse_exited"]
