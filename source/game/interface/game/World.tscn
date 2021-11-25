@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://source/game/interface/game/World.gd" type="Script" id=1]
 [ext_resource path="res://source/game/interface/game/LocationView.tscn" type="PackedScene" id=2]
@@ -6,6 +6,12 @@
 [ext_resource path="res://fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://art/tres/theme.tres" type="Theme" id=5]
 [ext_resource path="res://source/game/interface/game/Port.gd" type="Script" id=6]
+[ext_resource path="res://art/ui/S_stone_01.png" type="Texture" id=7]
+[ext_resource path="res://art/ui/S_plant_01.png" type="Texture" id=8]
+[ext_resource path="res://art/ui/S_inner_01.png" type="Texture" id=9]
+[ext_resource path="res://art/ui/S_outer_01.png" type="Texture" id=10]
+[ext_resource path="res://art/ui/S_window.png" type="Texture" id=11]
+[ext_resource path="res://source/game/interface/game/MountainShieldPanel.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -43,12 +49,23 @@ physics_object_picking = true
 [node name="WorldMap" parent="Port/Viewport" instance=ExtResource( 3 )]
 
 [node name="Panel" type="Panel" parent="Port"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.517647 )
 margin_right = 1280.0
 margin_bottom = 32.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Port/Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 11 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
 
 [node name="CenterContainer" type="CenterContainer" parent="Port/Panel"]
 anchor_right = 1.0
@@ -222,11 +239,313 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ResPanel" type="Panel" parent="Port"]
+self_modulate = Color( 1, 1, 1, 0.517647 )
+margin_right = 1280.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Port/ResPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 11 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Port/ResPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResStone" type="HBoxContainer" parent="Port/ResPanel/HBoxContainer"]
+margin_right = 160.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Port/ResPanel/HBoxContainer/ResStone"]
+margin_right = 32.0
+margin_bottom = 48.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Port/ResPanel/HBoxContainer/ResStone"]
+margin_left = 36.0
+margin_top = 15.0
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "灵矿"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separate" type="Label" parent="Port/ResPanel/HBoxContainer/ResStone"]
+margin_left = 72.0
+margin_top = 15.0
+margin_right = 88.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "："
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Port/ResPanel/HBoxContainer/ResStone"]
+margin_left = 92.0
+margin_top = 15.0
+margin_right = 119.0
+margin_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "141"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResPlant" type="HBoxContainer" parent="Port/ResPanel/HBoxContainer"]
+margin_left = 164.0
+margin_right = 324.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Port/ResPanel/HBoxContainer/ResPlant"]
+margin_right = 32.0
+margin_bottom = 48.0
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Port/ResPanel/HBoxContainer/ResPlant"]
+margin_left = 36.0
+margin_top = 15.0
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "灵草"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separate" type="Label" parent="Port/ResPanel/HBoxContainer/ResPlant"]
+margin_left = 72.0
+margin_top = 15.0
+margin_right = 88.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "："
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Port/ResPanel/HBoxContainer/ResPlant"]
+margin_left = 92.0
+margin_top = 15.0
+margin_right = 119.0
+margin_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "500"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResOutter" type="HBoxContainer" parent="Port/ResPanel/HBoxContainer"]
+margin_left = 328.0
+margin_right = 488.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Port/ResPanel/HBoxContainer/ResOutter"]
+margin_right = 32.0
+margin_bottom = 48.0
+texture = ExtResource( 10 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Port/ResPanel/HBoxContainer/ResOutter"]
+margin_left = 36.0
+margin_top = 15.0
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "外门"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separate" type="Label" parent="Port/ResPanel/HBoxContainer/ResOutter"]
+margin_left = 72.0
+margin_top = 15.0
+margin_right = 88.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "："
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Port/ResPanel/HBoxContainer/ResOutter"]
+margin_left = 92.0
+margin_top = 15.0
+margin_right = 110.0
+margin_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "20"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResInner" type="HBoxContainer" parent="Port/ResPanel/HBoxContainer"]
+margin_left = 492.0
+margin_right = 652.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Port/ResPanel/HBoxContainer/ResInner"]
+margin_right = 32.0
+margin_bottom = 48.0
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Port/ResPanel/HBoxContainer/ResInner"]
+margin_left = 36.0
+margin_top = 15.0
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "内门"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separate" type="Label" parent="Port/ResPanel/HBoxContainer/ResInner"]
+margin_left = 72.0
+margin_top = 15.0
+margin_right = 88.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "："
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Port/ResPanel/HBoxContainer/ResInner"]
+margin_left = 92.0
+margin_top = 15.0
+margin_right = 101.0
+margin_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "5"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LocationView" parent="." instance=ExtResource( 2 )]
 margin_left = 574.0
 margin_top = 96.0
 margin_right = 744.0
 margin_bottom = 370.0
+
+[node name="NextTurn" type="Button" parent="."]
+margin_left = 1175.0
+margin_top = 666.0
+margin_right = 1264.0
+margin_bottom = 716.0
+text = "下一月"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftTurn" type="Label" parent="."]
+margin_left = 1117.79
+margin_top = 597.697
+margin_right = 1221.79
+margin_bottom = 647.697
+rect_scale = Vector2( 1.58327, 1.76 )
+text = "剩余 3 行动力"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MountainShieldPanel" parent="." instance=ExtResource( 12 )]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.10089
+margin_top = 627.815
+margin_right = 104.101
+margin_bottom = 711.815
+rect_min_size = Vector2( 100, 84 )
+
+[node name="MessagePanel" type="Panel" parent="."]
+self_modulate = Color( 0.168627, 0.145098, 0.145098, 0.333333 )
+margin_left = 1.0
+margin_top = 591.0
+margin_right = 996.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MessagePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 11 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MessagePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MessagePanel/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 990.0
+margin_bottom = 124.0
+bbcode_enabled = true
+bbcode_text = "第一批开拓者踏入了蛮荒世界"
+text = "第一批开拓者踏入了蛮荒世界"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="Port" to="Port/Viewport/WorldMap" method="_on_Port_gui_input"]
 [connection signal="mouse_exited" from="Port" to="Port/Viewport/WorldMap" method="_on_Port_mouse_exited"]

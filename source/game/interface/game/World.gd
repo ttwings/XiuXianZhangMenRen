@@ -5,11 +5,11 @@ onready var world_map = $Port/Viewport/WorldMap
 var location_node
 
 func _ready():
-	location_view.hide()
-	location_node = world_map.get_node("Locations/L_mountain_001")
-	location_view.set_position(location_node.position + Vector2(32,0))
-	location_view.set_location(location_node.location)
-	location_view.show()
+#	location_view.hide()
+#	location_node = world_map.get_node("Locations/L_mountain_001")
+#	location_view.set_position(location_node.position + Vector2(32,0))
+#	location_view.set_location(location_node.location)
+#	location_view.show()
 	print(world_map.get_node("Locations/L_mountain_001").cell)
 	pass
 #	connect("mouse_entered")

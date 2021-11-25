@@ -21,6 +21,13 @@ var side_number := -1
 var team_name := ""
 var _neighbors := []
 #var castle := []
+func _init():
+	_neighbors.resize(6)
+func set_terrain(code:Array) -> void:
+	var data := []
+#	for c in code:
+#		data.append(Data.terrains[c])
+#	terrrain = Terrain.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
