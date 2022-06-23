@@ -4,6 +4,10 @@ onready var location_view = $LocationView
 onready var world_map = $Port/Viewport/WorldMap
 var location_node
 
+
+var xi_yu_huang_sha_huan_jing
+var XiYuHuangShaHuanJin
+
 func _ready():
 #	location_view.hide()
 #	location_node = world_map.get_node("Locations/L_mountain_001")

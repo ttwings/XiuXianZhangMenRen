@@ -8,7 +8,7 @@ export(Resource) var location
 
 signal mouse_entered_location()
 
-var cell:Vector2 setget ,get_cell
+var cell:Vector2 = Vector2(14,14) setget ,get_cell
 var pos_mouse:Vector2
 var map:TileMap
 var ui
@@ -24,15 +24,3 @@ func get_cell():
 	else:
 		cell = Vector2(-1,-1)
 		print_debug("no tilemap find")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Area2D_mouse_entered():
-	pos_mouse = get_global_mouse_position()
-	emit_signal("mouse_entered_location",pos_mouse)
-#	print_debug(pos_mouse)
-	print_debug(cell)
-	pass # Replace with function body.

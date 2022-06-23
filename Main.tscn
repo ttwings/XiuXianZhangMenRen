@@ -1,63 +1,48 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://djlt4d3g5gekb"]
 
-[ext_resource path="res://art/tres/theme.tres" type="Theme" id=1]
-[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource type="Theme" uid="uid://b3t6k80jor8ll" path="res://art/tres/theme.tres" id="1"]
+[ext_resource type="Script" path="res://Main.gd" id="2"]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme = ExtResource( "1" )
+script = ExtResource( "2" )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Panel"]
 anchor_right = 1.0
-margin_top = 50.0
-margin_bottom = 194.0
 size_flags_stretch_ratio = 0.0
 text = "修仙掌门人"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CenterContainer" type="CenterContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
-margin_left = 602.0
-margin_top = 320.0
-margin_right = 678.0
-margin_bottom = 400.0
+offset_left = 604.0
+offset_top = 360.0
+offset_right = 676.0
+offset_bottom = 440.0
 
 [node name="Start" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-margin_right = 76.0
-margin_bottom = 24.0
+offset_right = 72.0
+offset_bottom = 24.0
 text = "开始游戏"
 
 [node name="Load" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-margin_top = 28.0
-margin_right = 76.0
-margin_bottom = 52.0
+offset_top = 28.0
+offset_right = 72.0
+offset_bottom = 52.0
 text = "载入游戏"
 
 [node name="Exit" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-margin_top = 56.0
-margin_right = 76.0
-margin_bottom = 80.0
+offset_top = 56.0
+offset_right = 72.0
+offset_bottom = 80.0
 text = "退出游戏"
 
 [connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]

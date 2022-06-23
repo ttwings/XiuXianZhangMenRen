@@ -1,0 +1,2 @@
+Weapon (weapon.gd)
+GDScript

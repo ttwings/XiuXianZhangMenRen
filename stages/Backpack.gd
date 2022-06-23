@@ -4,8 +4,8 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var equip_dialog = $Tabs/EquipConfirmationDialog
-onready var equip_button = $HBoxContainer/Right/VBoxContainer/Item
+@onready var equip_dialog = $Tabs/EquipConfirmationDialog
+@onready var equip_button = $HBoxContainer/Right/VBoxContainer/Item
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

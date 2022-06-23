@@ -6,40 +6,28 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
-_global_script_classes=[ {
-"base": "Equip",
-"class": "Armor",
-"language": "GDScript",
-"path": "res://source/item/Armor.gd"
-}, {
-"base": "Item",
-"class": "Equip",
-"language": "GDScript",
-"path": "res://source/item/Equip.gd"
-}, {
+_global_script_classes=[{
 "base": "Resource",
-"class": "Item",
-"language": "GDScript",
-"path": "res://source/item/Item.gd"
-}, {
-"base": "Resource",
-"class": "Location",
-"language": "GDScript",
+"class": &"Location",
+"language": &"GDScript",
 "path": "res://source/map/Location.gd"
 }, {
-"base": "Item",
-"class": "Materials",
-"language": "GDScript",
-"path": "res://source/item/Materials.gd"
-} ]
+"base": "Resource",
+"class": &"RegionEvent",
+"language": &"GDScript",
+"path": "res://signals/region_event.gd"
+}, {
+"base": "Resource",
+"class": &"Weapon",
+"language": &"GDScript",
+"path": "res://data/items/weapons/weapon.gd"
+}]
 _global_script_class_icons={
-"Armor": "",
-"Equip": "",
-"Item": "",
 "Location": "",
-"Materials": ""
+"RegionEvent": "",
+"Weapon": ""
 }
 
 [application]
@@ -47,6 +35,7 @@ _global_script_class_icons={
 config/name="XiuXianZhangMenRen"
 config/description="修仙掌门人"
 run/main_scene="res://source/game/interface/game/World.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
@@ -56,10 +45,30 @@ Scene="*res://source/global/Scene.gd"
 
 [display]
 
-window/size/width=1280
-window/size/height=720
+window/size/viewport_width=1280
+window/size/viewport_height=800
 window/size/resizable=false
 window/stretch/mode="2d"
+window/size/width=1280
+window/size/height=720
+
+[input]
+
+turn_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"unicode":0,"echo":false,"script":null)
+]
+}
+turn_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"unicode":0,"echo":false,"script":null)
+]
+}
+fire={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 
