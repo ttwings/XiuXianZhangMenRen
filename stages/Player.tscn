@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct36buwdugmb3"]
+
+[ext_resource type="Script" path="res://stages/Player.gd" id="1_soqbp"]
+[ext_resource type="Texture2D" uid="uid://yxvkbslts4fn" path="res://icon.png" id="2_1u04i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q4s26"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource( "1_soqbp" )
+velocity = 160
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_q4s26" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( "2_1u04i" )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 50

@@ -6,16 +6,22 @@ signal cell_changed()
 signal game_time_changed( to )
 signal cell_selected( cell )
 
-export(Dictionary) var location_dic
+@export var location_dic:Dictionary
+@export var region_event:Resource
 
-var map_hovered = false setget _set_map_hovered
-var cell_hovered = null setget _set_cell_hovered
+var map_hovered = false:
+	set = _set_map_hovered
+var cell_hovered = null:
+	set = _set_cell_hovered
 
 var map
-var loc_dict = {} setget _set_loc_dict,_get_loc_dict
-onready var locations = $Locations
+var loc_dict = {} :
+	set = _set_loc_dict,
+	get = _get_loc_dict
+@onready var locations = $Locations
 
-var game_time = 0 setget _set_game_time
+var game_time = 0 :
+	set = _set_game_time
 
 func _ready():
 	var size = locations.get_child_count()
@@ -23,7 +29,7 @@ func _ready():
 	var loc
 	for i in size:
 		loc = locations.get_child(i)
-		cell = loc.get_cell()
+		cell = Vector2(14,14)
 		loc_dict[cell] = loc
 		print_debug(loc_dict)
 
@@ -36,7 +42,7 @@ func find_loc(cell):
 	if loc_dict and loc_dict[cell]:
 		return loc_dict[cell]
 	else:
-		print_debug("cell not find")		
+		print_debug("location not find on cell:",cell)		
 	
 func _set_loc_dict(dict):
 	loc_dict = dict	
@@ -52,12 +58,16 @@ func _on_Port_gui_input( ev ):
 		var mcell = map.world_to_map( get_global_mouse_position() )
 		if mcell != self.cell_hovered:
 			self.cell_hovered = mcell
+	# 划过关键点时候，响应显示内容
+		if loc_dict and loc_dict.has(mcell):
+			print_debug(loc_dict[mcell])		
+			
 	# Select a cell that's clicked
 	if ev is InputEventMouseButton and map_hovered:
-		if ev.pressed and ev.button_index == BUTTON_LEFT:
+		if ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
 			print("click!",self.cell_hovered)
 			emit_signal( "cell_selected", self.cell_hovered )
-		elif ev.pressed and ev.button_index == BUTTON_RIGHT:
+		elif ev.pressed and ev.button_index == MOUSE_BUTTON_RIGHT:
 			print("cancelled")
 			emit_signal( "cell_selected", null )
 

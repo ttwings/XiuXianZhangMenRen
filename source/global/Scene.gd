@@ -1,7 +1,7 @@
 extends Node
 
 var scenes := {
-	"World":"res://source/game/World.tscn",
+	"World":"res://source/game/interface/game/World.tscn",
 	"TitleScreen": "res://source/menu/TitleScreen.tscn",
 	"Game": "res://source/game/Game.tscn",
 	"MapEditor": "res://source/editor/MapEditor.tscn",

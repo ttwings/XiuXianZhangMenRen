@@ -1,283 +1,198 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://ccrfafc3xy6eg"]
 
-[ext_resource path="res://stages/Backpack.theme" type="Theme" id=1]
-[ext_resource path="res://stages/Backpack.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource type="Theme" path="res://stages/Backpack.theme" id="1"]
+[ext_resource type="Script" path="res://stages/Backpack.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://yxvkbslts4fn" path="res://icon.png" id="3"]
 
 [node name="Backpack" type="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme = ExtResource( "1" )
+script = ExtResource( "2" )
 
-[node name="Tabs" type="Tabs" parent="."]
+[node name="Tabs" type="TabBar" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 35.0
-margin_right = -4.0
-margin_bottom = -4.0
+offset_top = 25.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -8.0
-margin_bottom = -39.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Left" type="Panel" parent="Tabs/HBoxContainer"]
-margin_right = 630.0
-margin_bottom = 642.0
+offset_right = 638.0
+offset_bottom = 775.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="Tabs/HBoxContainer/Left"]
-margin_left = 183.848
-margin_top = 98.995
-margin_right = 485.848
-margin_bottom = 367.995
 columns = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_right = 98.0
-margin_bottom = 87.0
+offset_right = 64.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect2" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 102.0
-margin_right = 200.0
-margin_bottom = 87.0
+offset_left = 68.0
+offset_right = 132.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect3" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 204.0
-margin_right = 302.0
-margin_bottom = 87.0
+offset_left = 136.0
+offset_right = 200.0
+offset_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect4" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_top = 91.0
-margin_right = 98.0
-margin_bottom = 178.0
+offset_top = 68.0
+offset_right = 64.0
+offset_bottom = 132.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect5" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 102.0
-margin_top = 91.0
-margin_right = 200.0
-margin_bottom = 178.0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 132.0
+offset_bottom = 132.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect6" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 204.0
-margin_top = 91.0
-margin_right = 302.0
-margin_bottom = 178.0
+offset_left = 136.0
+offset_top = 68.0
+offset_right = 200.0
+offset_bottom = 132.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect7" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_top = 182.0
-margin_right = 98.0
-margin_bottom = 269.0
+offset_top = 136.0
+offset_right = 64.0
+offset_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect8" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 102.0
-margin_top = 182.0
-margin_right = 200.0
-margin_bottom = 269.0
+offset_left = 68.0
+offset_top = 136.0
+offset_right = 132.0
+offset_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="TextureRect9" type="TextureRect" parent="Tabs/HBoxContainer/Left/GridContainer"]
-margin_left = 204.0
-margin_top = 182.0
-margin_right = 302.0
-margin_bottom = 269.0
+offset_left = 136.0
+offset_top = 136.0
+offset_right = 200.0
+offset_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
+texture = ExtResource( "3" )
 
 [node name="Right" type="Panel" parent="Tabs/HBoxContainer"]
-margin_left = 634.0
-margin_right = 1264.0
-margin_bottom = 642.0
+offset_left = 642.0
+offset_right = 1280.0
+offset_bottom = 775.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Tabs/HBoxContainer/Right"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Item" type="Button" parent="Tabs/HBoxContainer/Right/VBoxContainer"]
-margin_right = 630.0
-margin_bottom = 32.0
-rect_min_size = Vector2( 0, 32 )
+offset_right = 638.0
+offset_bottom = 8.0
 size_flags_horizontal = 3
 flat = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Name" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item/HBoxContainer"]
-margin_top = 11.0
-margin_right = 48.0
-margin_bottom = 28.0
+offset_right = 48.0
+offset_bottom = 20.0
 text = "桃木剑"
 
 [node name="Desc" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item/HBoxContainer"]
-margin_left = 52.0
-margin_top = 11.0
-margin_right = 164.0
-margin_bottom = 28.0
+offset_left = 52.0
+offset_right = 164.0
+offset_bottom = 20.0
 text = "用桃木雕刻的剑"
 
 [node name="Damage" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item/HBoxContainer"]
-margin_left = 168.0
-margin_top = 11.0
-margin_right = 280.0
-margin_bottom = 28.0
+offset_left = 168.0
+offset_right = 280.0
+offset_bottom = 20.0
 text = "用桃木雕刻的剑"
 
 [node name="Item2" type="Panel" parent="Tabs/HBoxContainer/Right/VBoxContainer"]
-margin_top = 36.0
-margin_right = 630.0
-margin_bottom = 68.0
-rect_min_size = Vector2( 0, 32 )
+offset_top = 12.0
+offset_right = 638.0
+offset_bottom = 12.0
 size_flags_horizontal = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item2"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Name" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item2/HBoxContainer"]
-margin_top = 11.0
-margin_right = 48.0
-margin_bottom = 28.0
+offset_right = 48.0
+offset_bottom = 20.0
 text = "桃木剑"
 
 [node name="Desc" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item2/HBoxContainer"]
-margin_left = 52.0
-margin_top = 11.0
-margin_right = 164.0
-margin_bottom = 28.0
+offset_left = 52.0
+offset_right = 164.0
+offset_bottom = 20.0
 text = "用桃木雕刻的剑"
 
 [node name="Damage" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item2/HBoxContainer"]
-margin_left = 168.0
-margin_top = 11.0
-margin_right = 280.0
-margin_bottom = 28.0
+offset_left = 168.0
+offset_right = 280.0
+offset_bottom = 20.0
 text = "用桃木雕刻的剑"
 
 [node name="Item3" type="Panel" parent="Tabs/HBoxContainer/Right/VBoxContainer"]
-margin_top = 72.0
-margin_right = 630.0
-margin_bottom = 104.0
-rect_min_size = Vector2( 0, 32 )
+offset_top = 16.0
+offset_right = 638.0
+offset_bottom = 16.0
 size_flags_horizontal = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item3"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Name" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item3/HBoxContainer"]
-margin_top = 11.0
-margin_right = 48.0
-margin_bottom = 28.0
+offset_right = 48.0
+offset_bottom = 20.0
 text = "桃木剑"
 
 [node name="Desc" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item3/HBoxContainer"]
-margin_left = 52.0
-margin_top = 11.0
-margin_right = 164.0
-margin_bottom = 28.0
+offset_left = 52.0
+offset_right = 164.0
+offset_bottom = 20.0
 text = "用桃木雕刻的剑"
 
 [node name="Damage" type="Label" parent="Tabs/HBoxContainer/Right/VBoxContainer/Item3"]
-margin_left = 168.0
-margin_top = 11.0
-margin_right = 280.0
-margin_bottom = 28.0
 text = "用桃木雕刻的剑"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="EquipConfirmationDialog" type="ConfirmationDialog" parent="Tabs"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -261.0
-margin_top = -35.0
-margin_right = 261.0
-margin_bottom = 35.0
-window_title = "请确认..."
 dialog_text = "装备 短剑 到 武器 栏位？"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Tabs2" type="Tabs" parent="."]
+[node name="Tabs2" type="TabBar" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 35.0
-margin_right = -4.0
-margin_bottom = -4.0
 
 [connection signal="pressed" from="Tabs/HBoxContainer/Right/VBoxContainer/Item" to="." method="_on_Item_pressed"]
 [connection signal="confirmed" from="Tabs/EquipConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]

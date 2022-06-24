@@ -2,15 +2,15 @@ extends Resource
 
 class_name Location
 
-export(String) var alias = ""
-export(String,"金","水","木","火","土") var category
-export(int,"一阶","二阶","三阶","四阶","五阶","六阶") var gather
-export(int,0,999999) var res_stone
-export(int,0,999999) var res_plant
-export(String) var sect
-export(int,1,9) var space
-export(int,0,9) var field
-export(int,0,9) var mine
+@export var alias = ""
+@export_flags("金","水","木","火","土") var category
+@export_enum("一阶","二阶","三阶","四阶","五阶","六阶") var gather
+@export_range(0,999999,1) var res_stone
+@export_range(0,999999,1) var res_plant
+@export var sect:String
+@export_range(1,9,1) var space
+@export_range(0,9,1) var field
+@export_range(0,9,1) var mine
 
 var id := 0
 var cell := Vector2()
