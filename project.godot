@@ -70,6 +70,10 @@ fire={
 ]
 }
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-sqlite/plugin.cfg" )
+
 [physics]
 
 common/enable_pause_aware_picking=true
