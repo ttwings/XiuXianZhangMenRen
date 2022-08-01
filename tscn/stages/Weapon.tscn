@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://tscn/stages/Weapon.gd" id="1_lrn0s"]
+[ext_resource type="Resource" path="res://res/data/items/weapons/weapon_001.tres" id="2_qthoc"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource( "1_lrn0s" )
+data = ExtResource( "2_qthoc" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

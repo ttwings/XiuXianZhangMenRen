@@ -9,24 +9,138 @@
 config_version=5
 
 _global_script_classes=[{
+"base": "RefCounted",
+"class": &"AtkInfo",
+"language": &"GDScript",
+"path": "res://core/atkInfo.gd"
+}, {
+"base": "Base",
+"class": &"Att",
+"language": &"GDScript",
+"path": "res://core/att.gd"
+}, {
+"base": "RefCounted",
+"class": &"Base",
+"language": &"GDScript",
+"path": "res://core/base.gd"
+}, {
+"base": "Att",
+"class": &"Buff",
+"language": &"GDScript",
+"path": "res://core/buff.gd"
+}, {
+"base": "Obj",
+"class": &"Chara",
+"language": &"GDScript",
+"path": "res://core/chara.gd"
+}, {
+"base": "Item",
+"class": &"Csb",
+"language": &"GDScript",
+"path": "res://core/ex/csb.gd"
+}, {
+"base": "Item",
+"class": &"Eqp",
+"language": &"GDScript",
+"path": "res://core/ex/eqp.gd"
+}, {
+"base": "Eqp",
+"class": &"EqpCreate",
+"language": &"GDScript",
+"path": "res://core/ex/eqpCreate.gd"
+}, {
+"base": "Item",
+"class": &"Gem",
+"language": &"GDScript",
+"path": "res://core/ex/gem.gd"
+}, {
+"base": "Buff",
+"class": &"Item",
+"language": &"GDScript",
+"path": "res://core/item.gd"
+}, {
+"base": "RefCounted",
+"class": &"ItemGrid",
+"language": &"GDScript",
+"path": "res://core/itemGrid.gd"
+}, {
+"base": "RefCounted",
+"class": &"ItemPck",
+"language": &"GDScript",
+"path": "res://core/itemPck.gd"
+}, {
+"base": "Base",
+"class": &"Loca",
+"language": &"GDScript",
+"path": "res://core/loca.gd"
+}, {
+"base": "Loca",
+"class": &"LocaCastle",
+"language": &"GDScript",
+"path": "res://core/ex/locaCastle.gd"
+}, {
+"base": "Loca",
+"class": &"LocaTake",
+"language": &"GDScript",
+"path": "res://core/ex/locaTake.gd"
+}, {
 "base": "Resource",
 "class": &"Location",
 "language": &"GDScript",
-"path": "res://source/map/Location.gd"
+"path": "res://core/Location.gd"
+}, {
+"base": "Item",
+"class": &"Mater",
+"language": &"GDScript",
+"path": "res://core/ex/mater.gd"
+}, {
+"base": "Att",
+"class": &"Obj",
+"language": &"GDScript",
+"path": "res://core/obj.gd"
 }, {
 "base": "Resource",
 "class": &"RegionEvent",
 "language": &"GDScript",
-"path": "res://signals/region_event.gd"
+"path": "res://core/signals/region_event.gd"
+}, {
+"base": "RefCounted",
+"class": &"RndPool",
+"language": &"GDScript",
+"path": "res://core/rndPool.gd"
+}, {
+"base": "Obj",
+"class": &"Team",
+"language": &"GDScript",
+"path": "res://core/team.gd"
 }, {
 "base": "Resource",
 "class": &"Weapon",
 "language": &"GDScript",
-"path": "res://data/items/weapons/weapon.gd"
+"path": "res://res/data/items/weapons/weapon.gd"
 }]
 _global_script_class_icons={
+"AtkInfo": "",
+"Att": "",
+"Base": "",
+"Buff": "",
+"Chara": "",
+"Csb": "",
+"Eqp": "",
+"EqpCreate": "",
+"Gem": "",
+"Item": "",
+"ItemGrid": "",
+"ItemPck": "",
+"Loca": "",
+"LocaCastle": "",
+"LocaTake": "",
 "Location": "",
+"Mater": "",
+"Obj": "",
 "RegionEvent": "",
+"RndPool": "",
+"Team": "",
 "Weapon": ""
 }
 
@@ -34,14 +148,14 @@ _global_script_class_icons={
 
 config/name="XiuXianZhangMenRen"
 config/description="修仙掌门人"
-run/main_scene="res://source/game/interface/game/World.tscn"
+run/main_scene="res://tscn/interface/game/World.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [autoload]
 
 UI="*res://source/global/UI.gd"
-Scene="*res://source/global/Scene.gd"
+Scene="*res://core/sys/Scene.gd"
 
 [display]
 
@@ -51,6 +165,10 @@ window/size/resizable=false
 window/stretch/mode="2d"
 window/size/width=1280
 window/size/height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [input]
 
@@ -69,10 +187,6 @@ fire={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"unicode":0,"echo":false,"script":null)
 ]
 }
-
-[editor_plugins]
-
-enabled=PoolStringArray( "res://addons/godot-sqlite/plugin.cfg" )
 
 [physics]
 

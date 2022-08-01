@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://djlt4d3g5gekb"]
+[gd_scene load_steps=3 format=3 uid="uid://cuhwbj1rdcg5v"]
 
-[ext_resource type="Theme" uid="uid://b3t6k80jor8ll" path="res://art/tres/theme.tres" id="1"]
+[ext_resource type="Theme" path="res://res/art/tres/theme.tres" id="1"]
 [ext_resource type="Script" path="res://Main.gd" id="2"]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( "1" )
-script = ExtResource( "2" )
+theme = ExtResource("1")
+script = ExtResource("2")
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -23,26 +23,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
-offset_left = 604.0
-offset_top = 360.0
-offset_right = 676.0
-offset_bottom = 440.0
+offset_left = 612.0
+offset_top = 349.0
+offset_right = 668.0
+offset_bottom = 450.0
 
 [node name="Start" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-offset_right = 72.0
-offset_bottom = 24.0
+offset_right = 56.0
+offset_bottom = 31.0
 text = "开始游戏"
 
 [node name="Load" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-offset_top = 28.0
-offset_right = 72.0
-offset_bottom = 52.0
+offset_top = 35.0
+offset_right = 56.0
+offset_bottom = 66.0
 text = "载入游戏"
 
 [node name="Exit" type="Button" parent="Panel/CenterContainer/VBoxContainer"]
-offset_top = 56.0
-offset_right = 72.0
-offset_bottom = 80.0
+offset_top = 70.0
+offset_right = 56.0
+offset_bottom = 101.0
 text = "退出游戏"
 
 [connection signal="pressed" from="Panel/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]

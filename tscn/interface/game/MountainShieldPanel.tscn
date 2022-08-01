@@ -1,0 +1,337 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture" path="res://res/art/T_mountain.png" id="1"]
+[ext_resource type="Texture" path="res://res/art/ui/S_window.png" id="2"]
+[ext_resource type="Texture" path="res://res/art/ui/S_progressbar_00.png" id="3"]
+[ext_resource type="Texture" path="res://res/art/S_mountain_01.png" id="4"]
+[ext_resource type="Texture" path="res://res/art/ui/S_progressbar_01.png" id="5"]
+
+
+[node name="MountainShieldPanel" type="Panel"]
+self_modulate = Color( 1, 1, 1, 0.254902 )
+margin_left = 992.0
+margin_top = 63.0
+margin_right = 1279.0
+margin_bottom = 596.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 282.0
+margin_bottom = 528.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Building" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_right = 277.0
+margin_bottom = 18.0
+text = "护山大阵"
+align = 1
+
+[node name="MountainShield" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_top = 22.0
+margin_right = 277.0
+margin_bottom = 40.0
+text = "十方风火大阵"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_top = 44.0
+margin_right = 277.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 100 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_top = 148.0
+margin_right = 277.0
+margin_bottom = 222.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 272.0
+margin_bottom = 69.0
+texture = ExtResource( 2 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 272.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 35.0
+margin_right = 67.0
+margin_bottom = 64.0
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="State" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 71.0
+margin_top = 23.0
+margin_right = 119.0
+margin_bottom = 41.0
+text = "启动中"
+
+[node name="Per" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 123.0
+margin_top = 23.0
+margin_right = 187.0
+margin_bottom = 41.0
+text = "灵石消耗"
+
+[node name="Value" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 191.0
+margin_top = 23.0
+margin_right = 231.0
+margin_bottom = 41.0
+text = "32/月"
+
+[node name="HSeparator" type="HSeparator" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_top = 226.0
+margin_right = 277.0
+margin_bottom = 241.0
+custom_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+margin_top = 245.0
+margin_right = 277.0
+margin_bottom = 505.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="VBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 144.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Rank5" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank5"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "护阵十成"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank5"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Rank4" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 44.0
+margin_right = 144.0
+margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank4"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "护阵八成"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank4"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Rank3" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 88.0
+margin_right = 144.0
+margin_bottom = 128.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank3"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "护阵六成"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank3"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Rank2" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 132.0
+margin_right = 144.0
+margin_bottom = 172.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank2"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "护阵四成"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank2"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Rank1" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 176.0
+margin_right = 144.0
+margin_bottom = 216.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank1"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "护阵二成"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank1"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="Rank0" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left"]
+margin_top = 220.0
+margin_right = 144.0
+margin_bottom = 260.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank0"]
+margin_top = 11.0
+margin_right = 64.0
+margin_bottom = 29.0
+text = "关闭护阵"
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/Left/Rank0"]
+margin_left = 68.0
+margin_right = 144.0
+margin_bottom = 40.0
+
+[node name="TextureProgress" type="TextureProgress" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 148.0
+margin_right = 197.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+value = 50.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="right" type="VBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 201.0
+margin_right = 277.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_right = 76.0
+margin_bottom = 18.0
+text = "发动禁制"
+
+[node name="AttackButton" type="CheckButton" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 22.0
+margin_right = 76.0
+margin_bottom = 62.0
+
+[node name="HSeparator" type="HSeparator" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 66.0
+margin_right = 76.0
+margin_bottom = 70.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 74.0
+margin_right = 76.0
+margin_bottom = 194.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "十方风火：释放威力巨大火焰，燃烧侵犯敌人"
+text = "十方风火：释放威力巨大火焰，燃烧侵犯敌人"
+
+[node name="Attack" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 198.0
+margin_right = 76.0
+margin_bottom = 216.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Attack"]
+margin_right = 16.0
+margin_bottom = 18.0
+text = "攻"
+
+[node name="Value" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Attack"]
+margin_left = 20.0
+margin_right = 60.0
+margin_bottom = 18.0
+text = "5 + 3"
+
+[node name="Defence" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 220.0
+margin_right = 76.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Defence"]
+margin_right = 16.0
+margin_bottom = 18.0
+text = "防"
+
+[node name="Value" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Defence"]
+margin_left = 20.0
+margin_right = 28.0
+margin_bottom = 18.0
+text = "3"
+
+[node name="Dodge" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right"]
+margin_top = 242.0
+margin_right = 76.0
+margin_bottom = 260.0
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Dodge"]
+margin_right = 16.0
+margin_bottom = 18.0
+text = "幻"
+
+[node name="Value" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/right/Dodge"]
+margin_left = 20.0
+margin_right = 28.0
+margin_bottom = 18.0
+text = "3"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/item/Armor.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+alias = "道服"
+describe = "入门弟子所穿道服"
+lv = 0
+price = 50
+quality = 50
+durability = 50
+equipment_location = "Armor"
+defense_physical = 1
+defense_spell = 0

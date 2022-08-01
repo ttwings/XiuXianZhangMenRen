@@ -1,9 +1,0 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b3t6k80jor8ll"]
-
-[ext_resource type="FontData" uid="uid://dg5ia71fmi2og" path="res://fonts/unifont.ttf" id="1"]
-
-[sub_resource type="Font" id="1"]
-data/0 = ExtResource( "1" )
-
-[resource]
-default_font = SubResource( "1" )

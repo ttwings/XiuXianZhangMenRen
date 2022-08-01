@@ -1,13 +1,2 @@
-res://source/game/interface/game/World.tscn
-res://art/tres/theme.tres
-res://art/tres/base_tileset.tres
-res://stages/BattleStage.tscn
-res://stages/Player.tscn
-res://stages/WorldMap.tscn
-res://stages/Backpack.tscn
-res://stages/Weapon.tscn
-res://stages/player_bullet.tscn
-res://stages/MainStage.tscn
 res://Main.tscn
-res://stages/WorldMap.gd
-res://source/map/Location.gd
+res://core/rndPool.gd

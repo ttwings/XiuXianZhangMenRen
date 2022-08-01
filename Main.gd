@@ -1,6 +1,7 @@
 extends Control
 
-
+func _ready():
+	pass
 
 func _on_Start_pressed():
 	Scene.change("World")
